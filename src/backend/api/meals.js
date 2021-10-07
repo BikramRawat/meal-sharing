@@ -50,7 +50,18 @@ router.get("/", async (request, response) => {
     // get the meals with available reservations
     else if (queryParam.availableReservations) {
       const mealsWithAvailableReservations =
-        await getMealsWithAvailableReservations();
+      // await knex('meals').join('reservations',{'meals.id':'reservations.meal_id'})
+      // .select('meals.id','meals.title','meals.max_reservations as total_reservations', 
+      // knex.raw('meals.max_reservations - sum(reservations.number_of_guests) as available_reservations',))
+      // .sum('reservations.number_of_guests as reservations_booked')
+      // .having('meals.max_reservations', '>', 'sum(reservations.number_of_guests)')
+      // .groupBy('meals.id');
+
+      await knex.raw(`select meals.id, meals.title, meals.max_reservations, coalesce(SUM(reservations.no_of_guests), 0) as total_reservations from meals
+      left join reservations on meals.id = reservations.meal_id
+      group by meals.id
+      having
+      meals.max_reservations > total_reservations`).then((result)=>result[0])
       response.json(mealsWithAvailableReservations);
     }
     // else get all the meals
@@ -62,20 +73,7 @@ router.get("/", async (request, response) => {
     throw error;
   }
 });
-
-async function getMealsWithAvailableReservations() {
-  const foundMeal = await knex("meals")
-    .select("meals.id")
-    .from("meals")
-    .sum({ total_reservations: "reservations.no_of_guests" })
-    .join("reservations", { "meals.id": "reservations.meal_id" })
-    .groupBy("meals.id")
-    .having("total_reservations", "<", "meals.max_reservations");
-  const allMeals = await knex("meals");
-  return allMeals.filter((meal1) =>
-    foundMeal.some((meal2) => meal2.id === meal1.id)
-  );
-}
+  
 
 // http://localhost:5000/api/meals
 router.get("/", async (request, response) => {

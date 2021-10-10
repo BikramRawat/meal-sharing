@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+.navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style: none;
+    background: rgb(165, 141, 141);
+    border-bottom: 1px solid gainsboro;
+}
+ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+ul li {
+margin-left: 20px;
+list-style: none;
+text-decoration: none;
+color: white;
+}

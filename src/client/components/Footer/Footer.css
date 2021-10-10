@@ -1,0 +1,14 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: darkblue;
+    color: white;
+    height: 10vp;
+    border-top: 1px solid gainsboro;
+}
+
+.footer p {
+    font-size: 20px;
+}

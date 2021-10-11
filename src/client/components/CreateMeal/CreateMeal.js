@@ -7,7 +7,7 @@ export default function CreateMeal() {
   const textInput = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(url, {
+    fetch('/api/meals', {
       method: "post",
       headers: {
         "Content-Type": "application/json",

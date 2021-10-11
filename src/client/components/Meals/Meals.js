@@ -22,14 +22,14 @@ const Meals = () => {
       })
       .then((data) => {
         setMeals1(data);
-        console.log("Bikram", data);
         setIsLoad(false);
       })
       .catch((error) => {
         context.setIsError(error.message);
         context.setIsLoading(false);
       });
-  }, []);
+    }, []);
+    console.log("render", meals1, isLoad);
   return (
     <div className='display-meals'>
       {/* <DisplayMeals /> */}
@@ -37,11 +37,12 @@ const Meals = () => {
       <ul>
         {!isLoad ? (
           meals1.map((meal) => {
+            console.log(meal)
             return (
               <li key={meal.id}>
                 <p>Item</p>
-                <h3>{meal.title}</h3>
-                <p>{meal.description}</p>
+                <h3 style={{color: 'black'}}>{meal.title}</h3>
+                {/* <p>{meal.description}</p> */}
                 <Link to={`/meals/${meal.id}`}> Details</Link>
               </li>
             );

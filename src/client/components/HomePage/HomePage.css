@@ -1,16 +1,15 @@
 .home-page {
     min-height: 100vh;
     height: auto;
-    background: rgb(173, 223, 58);
-    color: white;
+    /* background: rgb(173, 223, 58); */
+    /* color: white; */
     /* width: 100%; */
-
 }
 
 .homepage-search {
     margin-top: 10px 0;
     display: flex;
-align-items: center;
+align-items: flex-start;
 flex-direction: row;
 flex-wrap: wrap;
 justify-content: center;

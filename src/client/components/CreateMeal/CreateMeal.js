@@ -1,22 +1,19 @@
-import React, {useState} from "react";
-import Header from "../Header/Header";
-import NavBar from "../NavBar/NavBar";
-import Footer from "../Footer/Footer";
-import moment from 'moment';
+import React, { useState } from "react";
+// import moment from 'moment';
 
 export default function CreateMeal() {
   const [title, setTitle] = useState("");
-  const [maxReservations, setMaxReservations] = useState();
+  const [maxReservations, setMaxReservations] = useState(0);
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
-  const [when, setWhen] = useState();
-  const [price, setPrice] = useState();
-  const [meal, setMeal] = useState("");
+  const [when, setWhen] = useState('');
+  const [price, setPrice] = useState(0);
+  // const [meal, setMeal] = useState("");
   // const date = moment(new Date()).format("DD-MM-YYYY");
 
-  console.log(typeof Number(maxReservations))
+  console.log(typeof Number(maxReservations));
 
-  React.useEffect(() => {
+  const createMeal= (meal) => {
     const url = "http://localhost:5000/api/meals";
     if (meal) {
       fetch(url, {
@@ -27,45 +24,50 @@ export default function CreateMeal() {
         body: JSON.stringify(meal),
       })
         .then((response) => response.json())
-        .then((data) => setMeal(data))
+        .then((data) => {
+          console.log("Success", data);
+        })
         .catch((error) => {
-          alert(error);
+          console.log("Error", error);
         });
     }
-  }, [meal]);
-
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
     const newMeal = {
       title: title,
-      max_reservations: Number(maxReservations),
+      maxReservations: Number(maxReservations),
       description: description,
       location: location,
       when: when,
       price: price,
-      // created_date: date,
+      created_date: new Date(),
     };
-    setMeal(newMeal);
+    createMeal(newMeal);
     setTitle("");
-    setMaxReservations();
+    setMaxReservations(0);
     setDescription("");
     setLocation("");
-    setWhen();
-    setPrice();
+    setWhen('');
+    setPrice(0);
   };
   return (
     <div>
-      
-
       <p>Insert the meal data to create a new meal</p>
 
       <form onSubmit={handleSubmit}>
-      <div>
-      <label htmlFor="title">Title</label>
-          <input type="text" id="title"  onChange={(e) => setTitle(e.target.value)} placeholder="Enter the title ..." />         
+        <div>
+          <label htmlFor="title">Title</label>
+          <input
+            type="text"
+            id="title"
+            onChange={(e) => setTitle(e.target.value)}
+            placeholder="Enter the title ..."
+            required
+          />
         </div>
         <div>
-        <label htmlFor="description">Description</label>
+          <label htmlFor="description">Description</label>
           <input
             type="text"
             id="description"
@@ -74,7 +76,7 @@ export default function CreateMeal() {
           />
         </div>
         <div>
-        <label htmlFor="location">Location</label>
+          <label htmlFor="location">Location</label>
           <input
             type="text"
             id="location"
@@ -83,31 +85,35 @@ export default function CreateMeal() {
           />
         </div>
         <div>
-        <label htmlFor="max_reservations">Max Reservations</label>
+          <label htmlFor="max_reservations">Max Reservations</label>
           <input
             type="number"
             id="max_reservations"
             value={maxReservations}
             min="1"
+            max='10'
             onChange={(e) => setMaxReservations(e.target.value)}
+            required
           />
         </div>
         <div>
-        <label htmlFor="price">Price</label>
+          <label htmlFor="price">Price</label>
           <input
             type="number"
             id="price"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
+            required
           />
         </div>
         <div>
-        <label htmlFor="when">Pick Date</label>
+          <label htmlFor="when">Pick Date</label>
           <input
             type="date"
             id="when"
             value={when}
             onChange={(e) => setWhen(e.target.value)}
+            required
           />
         </div>
         <button type="submit">Create Meal</button>

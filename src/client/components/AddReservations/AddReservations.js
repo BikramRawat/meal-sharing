@@ -1,28 +1,21 @@
 import React, { useState } from "react";
 import { useParams } from "react-router";
-import Header from "../Header/Header";
-import NavBar from "../NavBar/NavBar";
-import { Link } from "react-router-dom";
-import Footer from "../Footer/Footer";
-import moment from "moment";
 import Meals from "../Meals/Meals";
-// import food_item from '../../assets/food_item.jpg';
 
 export default function AddReservations(props) {
-  const [reservation, setReservation] = useState("");
+  // const [reservation, setReservation] = useState("");
   const [contactName, setContactName] = useState("");
   const [numberOfGuests, setNumberOfGuests] = useState(1);
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [meal, setMeal] = React.useState();
-  const date = moment(new Date()).format("DD-MM-YYYY");
+  const [meal, setMeal] = React.useState('');
   const params = useParams();
-  console.log(Number(params.id)[0])
+  // console.log(Number(params.id)[0]);
   // React.useEffect(() => {
-    // setMeal(
-    //   props.meals.filter((aMeal) => {
-    //     return aMeal.id == Number(params.id)[0];
-    //   })
+  // setMeal(
+  //   props.meals.filter((aMeal) => {
+  //     return aMeal.id == Number(params.id)[0];
+  //   })
   //   );
   // }, []);
   // props.meals.filter((aMeal) => {
@@ -30,6 +23,15 @@ export default function AddReservations(props) {
   //   });
 
   React.useEffect(() => {
+    const mealUrl = `http://localhost:5000/api/meals/${params.id}`;
+    fetch(mealUrl)
+    .then((response)=> response.json())
+    .then(data=> setMeal(data))
+    
+  }, [params.id]);
+
+  const createReservation=(reservation) => {
+    console.log('reservation', reservation);
     const url = "http://localhost:5000/api/reservations";
     if (reservation) {
       fetch(url, {
@@ -40,12 +42,15 @@ export default function AddReservations(props) {
         body: JSON.stringify(reservation),
       })
         .then((response) => response.json())
-        // .then((data) => setReservation(data))
+        .then((data) => {
+          console.log('Success', data);
+        })
         .catch((error) => {
-          alert(error);
+          console.log('Error', error);
         });
     }
-  }, [reservation]);
+  }
+ 
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -55,30 +60,27 @@ export default function AddReservations(props) {
       phone_number: phoneNumber,
       contact_name: contactName,
       contact_email_id: email,
-      created_date: date,
+      created_date: new Date()
     };
-    setReservation(newReservation);
+    createReservation(newReservation);
     setContactName("");
     setEmail("");
-    setNumberOfGuests();
-    setPhoneNumber();
+    setNumberOfGuests(1);
+    setPhoneNumber('');
   };
+
+if(!meal){
+  return null;
+}
+
   return (
     <>
       <div className="add-reservarions">
-        {/* <h3>Meal: {meal.title}</h3> */}
-        {/* <img src={food_item} width='100px' height='80px' alt='food_item' /> */}
-        {/* <p>Description: {meal.description}</p>
-        <p>Location: {meal.location}</p>
-        <p>When: {meal.when}</p>
-        <p>Price: {meal.price}</p>
-        <p>Max Reservations: {meal.max_reservations}</p>
-        <p>Created Date: {meal.created_date}</p>  */}
         <Meals meals={meal} />
-        <div>
+        {/* <div>
           <Link to={`/meals/${meal.id}`}>Book Meal</Link> <br />
           <Link to={`/meals/${meal.id}/reviews`}>View Reviews</Link>
-        </div>
+        </div> */}
         <div>
           <form onSubmit={handleSubmit}>
             <div>

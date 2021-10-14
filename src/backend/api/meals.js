@@ -146,7 +146,8 @@ router.get("/:id", async (request, response) => {
 // adding a new meal using postman app : using request.body
 router.post("/", async (request, response) => {
   try {
-    await knex("meals").insert(
+    // console.log(request.body);
+    const newMeal =  await knex("meals").insert(
       {title: request.body.title,
         max_reservations:request.body.maxReservations,
         description: request.body.description,
@@ -156,7 +157,8 @@ router.post("/", async (request, response) => {
         created_date: new Date(),
       }
     );
-    
+    // console.log(newMeal);
+    response.json(newMeal);
   } catch (error) {
     throw error;
   }

@@ -1,8 +1,19 @@
 .aboutus {
     min-height: 80vh;
     height: auto;
-    background: rgb(173, 223, 58);
+    background: rgb(14, 19, 5);
     color: white; 
     width: 100%;
+    opacity: 0.9;
+    font-size: 22px;
 
+}
+
+ .images {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 15px;
 }

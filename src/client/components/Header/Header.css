@@ -17,10 +17,10 @@
 .heading img {
   border-radius: 50%;
 }
-.heading h1 {
+.heading p {
   margin-left: 100px;
-  size: 100px;
-  color: red;
+  color: rgb(9, 13, 230);
   font-weight: 800;
+  font-size: 80px;
 
 }

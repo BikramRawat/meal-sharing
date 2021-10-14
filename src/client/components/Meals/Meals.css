@@ -2,11 +2,23 @@
    
         width:auto;
          height: auto;
-          background: violet;
-          display: flex;
-          justify-content: space-between;
-          flex-direction: row;
+          background:darksalmon;
+          /* display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          flex-direction: row; */
 
 
+}
+
+.meals-details .display {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        row-gap: 30px;
+        padding-top: 20px;
+        align-content: center;
+       
 }
 

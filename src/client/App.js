@@ -35,7 +35,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/meals">
-          <Meals meals={meals} src='../../assets/food_item.jpg' />
+          <Meals meals={meals} />
         </Route>
         <Route exact path={`/meals/:id`}>
           <AddReservations meals={meals} />
@@ -54,7 +54,7 @@ function App() {
       </Switch>
       <Footer />
     </Router>
-    // </myContext.Provider>
+  </myContext.Provider>
   );
 }
 

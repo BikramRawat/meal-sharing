@@ -9,9 +9,18 @@
     justify-content: space-between;
     text-decoration: none;
     list-style: none;
+    min-height: 60px;
     color: white;
-    background: rgb(165, 141, 141);
-    border-bottom: 1px solid gainsboro;
+    background: rgb(66, 37, 233);
+    border-bottom: 2px solid rgb(245, 235, 236);
+    border-top: 2px solid rgb(226, 211, 213);
+}
+
+.navbar li {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-size: larger;
 }
 ul {
     display: flex;
@@ -23,7 +32,13 @@ text-decoration: none;
 }
 .navbar ul li {
 margin-left: 20px;
+font-size: larger;
 
 color: white;
 
 }
+.navbar ul li:hover {
+    cursor: pointer;
+    color: turquoise;
+    background-color: darkviolet;
+    }

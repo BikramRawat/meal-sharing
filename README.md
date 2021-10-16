@@ -78,3 +78,8 @@ The api can now be found on `http://localhost:3000/api/` an example is `http://l
 ## ✍️ Authors <a name = "authors"></a>
 
 - [@benna100](https://github.com/benna100) - Idea & Initial work
+
+
+## The website name after successfully deployed on heroku is : meal-sharing-app-hyf
+- The URL for the app is as given below: 
+- https://meal-sharing-app-hyf.herokuapp.com/

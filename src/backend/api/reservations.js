@@ -31,8 +31,17 @@ router.get('/:id', async (request, response) => {
 // adding a new reservation using postman app : request.body
 router.post("/", async (request, response) => {
   try {
-    await knex("reservations").insert(request.body);
-    response.json('New reservation is added');
+    const newReservation=     await knex("reservations").insert(
+      {
+        meal_id : request.body.meal_id,
+        no_of_guests: request.body.no_of_guests,
+        phone_number: request.body. phone_number,
+        contact_name: request.body.contact_name,
+        contact_email_id: request.body.contact_email_id,
+        created_date: new Date(),
+      }
+        );
+    response.json(newReservation);
   } catch (error) {
     throw error;
   }

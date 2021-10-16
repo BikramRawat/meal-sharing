@@ -75,7 +75,7 @@ router.get("/", async (request, response) => {
       // .groupBy('meals.id');
 
 const mealsWithAvailableReservations =
-      await knex.raw(`select meals.id, meals.title, meals.max_reservations, coalesce(SUM(reservations.no_of_guests), 0) as total_reservations from meals
+      await knex.raw(`select meals.id, meals.title,meals.description,meals.location,meals.price,meals.created_date, meals.max_reservations, coalesce(SUM(reservations.no_of_guests), 0) as total_reservations from meals
       left join reservations on meals.id = reservations.meal_id
       group by meals.id
       having
@@ -146,8 +146,19 @@ router.get("/:id", async (request, response) => {
 // adding a new meal using postman app : using request.body
 router.post("/", async (request, response) => {
   try {
-    await knex("meals").insert(request.body);
-    response.json("New meal is added");
+    // console.log(request.body);
+    const newMeal =  await knex("meals").insert(
+      {title: request.body.title,
+        max_reservations:request.body.maxReservations,
+        description: request.body.description,
+        location: request.body.location,
+        when: request.body.when,
+        price: request.body.price,
+        created_date: new Date(),
+      }
+    );
+    // console.log(newMeal);
+    response.json(newMeal);
   } catch (error) {
     throw error;
   }

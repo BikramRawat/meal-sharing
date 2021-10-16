@@ -34,10 +34,10 @@ router.post("/", async (request, response) => {
     const newReservation=     await knex("reservations").insert(
       {
         meal_id : request.body.meal_id,
-        no_of_guests: request.body.numberOfGuests,
-        phone_number: request.body.phoneNumber,
-        contact_name: request.body.contactName,
-        contact_email_id: request.body.email,
+        no_of_guests: request.body.no_of_guests,
+        phone_number: request.body. phone_number,
+        contact_name: request.body.contact_name,
+        contact_email_id: request.body.contact_email_id,
         created_date: new Date(),
       }
         );

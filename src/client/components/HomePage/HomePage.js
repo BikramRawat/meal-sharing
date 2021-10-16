@@ -10,8 +10,6 @@ export default function HomePage(props) {
 
   return (
     <>
-      {/* <Header />
-      <NavBar /> */}
       <img
         src="https://wallpaperaccess.com/full/3014609.jpg"
         height="400px"
@@ -19,6 +17,7 @@ export default function HomePage(props) {
       />
       <SearchMeal />
       <Meals meals={meals} />
+      
     </>
   );
 }

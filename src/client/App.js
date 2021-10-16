@@ -11,28 +11,37 @@ import { myContext } from "./contexts/Context";
 import Header from "./components/Header/Header";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import {availableContext } from './contexts/availableContext'
 
 function App() {
   const [meals, setMeals] = useState([]);
   const [reviews, setReviews] = useState([]);
+  const [state, setState] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
 
 
 
   useEffect(() => {
-    fetch("/api/meals")
+    fetch(`/api/meals?availableReservations=${state}&title=${searchQuery}`)
       .then((res) => res.json())
       .then((data) => setMeals(data));
-
+      
     fetch("/api/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
-  }, []);
+  }, [state, searchQuery]);
+
+  const available = {
+    state, setState, searchQuery, setSearchQuery,
+  }
 
   return (
     <myContext.Provider value={meals}>
     <Router>
       <Header />
+      <availableContext.Provider value={available}>
       <NavBar />
+      
       <Switch>
         <Route exact path="/meals">
           <Meals meals={meals} />
@@ -52,6 +61,7 @@ function App() {
         </Route>
         <Route path="*" component={Page404} />
       </Switch>
+      </availableContext.Provider>
       <Footer />
     </Router>
   </myContext.Provider>

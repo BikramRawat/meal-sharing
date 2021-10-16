@@ -75,7 +75,7 @@ router.get("/", async (request, response) => {
       // .groupBy('meals.id');
 
 const mealsWithAvailableReservations =
-      await knex.raw(`select meals.id, meals.title, meals.max_reservations, coalesce(SUM(reservations.no_of_guests), 0) as total_reservations from meals
+      await knex.raw(`select meals.id, meals.title,meals.description,meals.location,meals.price,meals.created_date, meals.max_reservations, coalesce(SUM(reservations.no_of_guests), 0) as total_reservations from meals
       left join reservations on meals.id = reservations.meal_id
       group by meals.id
       having

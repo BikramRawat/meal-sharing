@@ -30,6 +30,8 @@ export default function AddReservations(props) {
     
   }, [params.id]);
 
+  console.log('meal', meal);
+
   const createReservation=(reservation) => {
     console.log('reservation', reservation);
     const url = "http://localhost:5000/api/reservations";
@@ -56,8 +58,8 @@ export default function AddReservations(props) {
     event.preventDefault();
     const newReservation = {
       meal_id: Number(params.id),
-      no_of_guests: numberOfGuests,
-      phone_number: phoneNumber,
+      no_of_guests: Number(numberOfGuests),
+      phone_number: Number(phoneNumber),
       contact_name: contactName,
       contact_email_id: email,
       created_date: new Date()
@@ -76,11 +78,7 @@ if(!meal){
   return (
     <>
       <div className="add-reservarions">
-        <Meals meals={meal} />
-        {/* <div>
-          <Link to={`/meals/${meal.id}`}>Book Meal</Link> <br />
-          <Link to={`/meals/${meal.id}/reviews`}>View Reviews</Link>
-        </div> */}
+        {meal ? <Meals meals={meal} /> : <p>Loading ...</p>}
         <div>
           <form onSubmit={handleSubmit}>
             <div>
@@ -116,7 +114,7 @@ if(!meal){
               <label htmlFor="email">Contact Email</label>
               <input
                 type="email"
-                id="email"
+                id="contact_email_id"
                 value={email}
                 placeholder="Enter email ..."
                 onChange={(e) => setEmail(e.target.value)}

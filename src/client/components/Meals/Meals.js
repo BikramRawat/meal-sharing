@@ -18,13 +18,13 @@ const Meals = (props) => {
                 alt="foodimage"
               />
             </div>
-            <p>Description: {meal.description}</p>
-            <p>Location: {meal.location}</p>
-            <p>When: {meal.when}</p>
-            <p>Price: {meal.price} DKK</p>
-            <p>Max Reservations: {meal.max_reservations}</p>
-            <p>Created Date: {meal.created_date}</p>
-            <div>
+            <p><span>Description:</span> {meal.description}</p>
+            <p><span>Location:</span> {meal.location}</p>
+            <p><span>When:</span> {meal.when}</p>
+            <p><span>Price:</span> {meal.price} DKK</p>
+            <p><span>Max Reservations:</span> {meal.max_reservations}</p>
+            <p><span>Created Date:</span> {meal.created_date}</p>
+            <div className='links-bookmeal-reviews'>
               <Link to={`/meals/${meal.id}`}>Book Meal</Link> <br />
               <Link to={`/meals/${meal.id}/reviews`}>View Reviews</Link>
             </div>

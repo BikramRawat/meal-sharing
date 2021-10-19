@@ -6,12 +6,11 @@ export default function AboutUs() {
     <div className="aboutus">
       <p>
         <h3>About Us : </h3>
-        Vores mad bærer præg af det kinesiske og indiske køkken, men på trods af
-        landets gigantiske naboer, så besidder madkulturen i Nepal sit eget
-        unikke udtryk med sine karakteristiske krydderier og
-        tilberedningsmetoder. Hos os kan man bl.a. nyde autentiske Mo:mo
-        (nepalesiske dumplings), unikke karryretter og saftige stykker kød fra
-        grillen.
+        Our food is characterized by Chinese and Indian cuisine, 
+        but despite the country's gigantic neighbors, the food culture of Nepal 
+        possesses its own unique expression with its distinctive spices and cooking
+         methods. With us you can e.g. enjoy authentic Mo: mo (Nepalese dumplings), 
+         unique curries and juicy pieces of meat from the grill.
       </p>
       <div className='images'>
         <img
@@ -33,21 +32,31 @@ export default function AboutUs() {
           alt="momo"
         />
         </div>
-        <p>I frederiksberg ligger Restaurent Nepali Bhancha, der på dansk betyder Nepalesiske Køkken. December 2018 har vi begynder vores nye afdeling her i Frederiksberg, efter en stor succes af Tagensvej afdeling hvor vi har forkælet vores gæster med smagfulde og veltilberedte retter fra Nepal siden 2015
-
-Vores mad bærer præg af det kinesiske og indiske køkken, men på trods af landets gigantiske naboer, så besidder madkulturen i Nepal sit eget unikke udtryk med sine karakteristiske krydderier og tilberedningsmetoder. Hos os kan man bl.a. nyde autentiske Mo:mo (nepalesiske dumplings), unikke karryretter og saftige stykker kød fra grillen.
-
-Stemningen hos os er behagelig og afslappet, og det understøttes af vores hyggelige indretning og altid venlige personale.
-
-Hos os sætter vi stor fokus på økologi og anvender derfor så vidt muligt udelukkende økologiske råvarer. Man kan derfor passende slukke tørsten med en økologisk øl (fra Nørrebro Bryghus) eller med en kop økologisk te eller kaffe.
-
-Kig forbi Nepali Bhancha og forkæl sanserne med en fantastisk smag eksplosion fra det lille land i bjergene.
+        <p>In Frederiksberg is Restaurent Nepali Bhancha, which in 
+          Danish means Nepalese Cuisine. December 2018 we start our 
+          new department here in Frederiksberg, after a great success 
+          of Tagensvej department where we have spoiled our guests with 
+          tasty and well-prepared dishes from Nepal since 2015. Our food is 
+          characterized by Chinese and Indian cuisine, but despite the country
+           giant neighbors, then the food culture of Nepal possesses its own
+            unique expression with its distinctive spices and cooking methods. 
+            With us you can e.g. enjoy authentic Mo: mo (Nepalese dumplings), 
+            unique curries and juicy pieces of meat from the grill. The atmosphere
+             with us is pleasant and relaxed, and it is supported by our cozy decor 
+             and always friendly staff. With us, we place great focus on ecology and
+              therefore use as far as possible exclusively organic raw materials. 
+              You can therefore suitably quench your thirst with an organic beer 
+              (from Nørrebro Bryghus) or with a cup of organic tea or coffee. 
+              Look past Nepali Bhancha and pamper the senses with an amazing taste 
+              explosion from the small country in the mountains.
 
 </p>
-<h3>Åbningstider:</h3>
+<div className='opening_hours'>
+<h3>Opening Hours:</h3>
 <p>
-Mandag til Fredag: 14:00 til 22:00
-Lørdag og Søndag: 12:00 til 22:00</p>
+Monday to Friday: 14:00 to 22:00 <br/>
+Saturday Nd Sunday: 12:00 to 22:00</p>
+</div>
     </div>
   );
 }

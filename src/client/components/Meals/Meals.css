@@ -22,3 +22,16 @@
        
 }
 
+.links-bookmeal-reviews{
+       
+        background-color: rgb(233, 170, 43);
+        padding:4px;
+        color: darkred;
+        border: 1px dotted black;
+}
+
+span {
+        font-weight: 700;
+        font-size: 18px;
+        margin: 2px 3px;
+}

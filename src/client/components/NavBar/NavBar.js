@@ -10,7 +10,7 @@ const getAvailable = ()=> {
   return context.state === '' ? context.setState(true): context.setState('');
 }
 
-const toggleAvailable = context.state === ''? 'Available Reservations Only' : 'All Meals';
+const toggleAvailable = context.state === ''? 'Click here for Available Reservations' : 'Display All Meals';
 
 const deleteVar= ()=> {
   context.setState('');
@@ -37,8 +37,9 @@ const deleteVar= ()=> {
           <li>Create Meal</li>
         </Link> */}
 
-        <button onClick={getAvailable}>{toggleAvailable}</button>
+        
       </ul>
+      <button className='available_reservations' onClick={getAvailable}>{toggleAvailable}</button>
     </nav>
   );
 }

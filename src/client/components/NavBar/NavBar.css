@@ -42,3 +42,14 @@ color: white;
     color: turquoise;
     background-color: darkviolet;
     }
+
+    .available_reservations {
+            width: 12em;
+            height: 5em;
+            background-color: rgb(247, 243, 30);
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 700;
+            border-radius: 6px;
+    
+    }

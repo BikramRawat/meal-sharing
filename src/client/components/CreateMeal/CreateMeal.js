@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 // import moment from 'moment';
+import './CreateMeal.css';
+import swal from "sweetalert";
 
 export default function CreateMeal() {
   const [title, setTitle] = useState("");
@@ -44,6 +46,7 @@ export default function CreateMeal() {
       created_date: new Date(),
     };
     createMeal(newMeal);
+    swal("Good Job !", "New meal is created", "success");
     setTitle("");
     setMaxReservations(0);
     setDescription("");
@@ -52,7 +55,9 @@ export default function CreateMeal() {
     setPrice(0);
   };
   return (
-    <div>
+    <div className='create_meal'>
+      <fieldset className='field_set'>
+        <legend className='legend'>Create Meal</legend>
       <p>Insert the meal data to create a new meal</p>
 
       <form onSubmit={handleSubmit}>
@@ -68,11 +73,11 @@ export default function CreateMeal() {
         </div>
         <div>
           <label htmlFor="description">Description</label>
-          <input
-            type="text"
+          <textarea
             id="description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+            required
           />
         </div>
         <div>
@@ -82,6 +87,7 @@ export default function CreateMeal() {
             id="location"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
+            required
           />
         </div>
         <div>
@@ -118,6 +124,7 @@ export default function CreateMeal() {
         </div>
         <button type="submit">Create Meal</button>
       </form>
+      </fieldset>
     </div>
   );
 }

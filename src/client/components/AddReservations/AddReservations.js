@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useParams } from "react-router";
 import Meals from "../Meals/Meals";
+import './AddReservations.css';
+import swal from "sweetalert";
 
 export default function AddReservations(props) {
   // const [reservation, setReservation] = useState("");
@@ -65,6 +67,7 @@ export default function AddReservations(props) {
       created_date: new Date()
     };
     createReservation(newReservation);
+    swal("Enjoy your meal !", "meal reservation is completed", "success");
     setContactName("");
     setEmail("");
     setNumberOfGuests(1);
@@ -78,8 +81,12 @@ if(!meal){
   return (
     <>
       <div className="add-reservarions">
+        <div className='book-meal'>
         {meal ? <Meals meals={meal} /> : <p>Loading ...</p>}
+        </div>
         <div>
+          <fieldset className='field_set'>
+            <legend className='legend'>Book Meal</legend>
           <form onSubmit={handleSubmit}>
             <div>
               <label htmlFor="contact_name">Contact Name</label>
@@ -89,6 +96,7 @@ if(!meal){
                 value={contactName}
                 placeholder="Enter the name ..."
                 onChange={(e) => setContactName(e.target.value)}
+                required
               />
             </div>
             <div>
@@ -99,6 +107,7 @@ if(!meal){
                 value={numberOfGuests}
                 onChange={(e) => setNumberOfGuests(e.target.value)}
                 min="1"
+                required
               />
             </div>
             <div>
@@ -108,6 +117,7 @@ if(!meal){
                 id="phone_number"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
+                required
               />
             </div>
             <div>
@@ -118,10 +128,13 @@ if(!meal){
                 value={email}
                 placeholder="Enter email ..."
                 onChange={(e) => setEmail(e.target.value)}
+                required
               />
             </div>
             <button type="submit">Book Meal</button>
+            
           </form>
+          </fieldset>
         </div>
       </div>
     </>

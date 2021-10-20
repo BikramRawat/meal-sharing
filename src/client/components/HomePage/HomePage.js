@@ -2,11 +2,13 @@ import React from "react";
 import { myContext } from "../../contexts/Context";
 // import "./HomePage.css";
 import Meals from "../Meals/Meals";
-import SearchMeal from '../SearchMeal/SearchMeal';
+import SearchMeal from "../SearchMeal/SearchMeal";
+import MealReviews from "../MealReviews/MealReviews";
 // import food_item from '../../assets/food_item.png';
 
 export default function HomePage(props) {
   const meals = React.useContext(myContext);
+  const reviews = React.useContext(myContext);
 
   return (
     <>
@@ -17,6 +19,9 @@ export default function HomePage(props) {
       />
       <SearchMeal />
       <Meals meals={meals} />
+      <h3>Have a look over Meal Reviews:</h3>
+      <hr />
+      <MealReviews reviews={reviews} />
     </>
   );
 }

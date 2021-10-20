@@ -1,24 +1,23 @@
 .aboutus {
-    min-height: 80vh;
-    height: auto;
-    background: rgb(205, 226, 11);
-    width: 100%;
-    opacity: 0.9;
-    font-size: 22px;
-
+  min-height: 80vh;
+  height: auto;
+  background: rgb(205, 226, 11);
+  width: 100%;
+  opacity: 0.9;
+  font-size: 22px;
 }
 
 .opening_hours {
-    text-align: center;
-    background-color: rgb(253, 85, 7);
-    min-height: 6em;
-    padding: 1em;
+  text-align: center;
+  background-color: rgb(253, 85, 7);
+  min-height: 6em;
+  padding: 1em;
 }
- .images {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 15px;
+.images {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 15px;
 }

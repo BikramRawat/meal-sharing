@@ -1,37 +1,31 @@
 .meals-details {
-   
-        width:auto;
-         height: auto;
-          background:darksalmon;
-          /* display: flex;
+  width: auto;
+  height: auto;
+  background: darksalmon;
+  /* display: flex;
           flex-wrap: wrap;
           justify-content: space-evenly;
           flex-direction: row; */
-
-
 }
 
 .meals-details .display {
-
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        row-gap: 30px;
-        padding-top: 20px;
-        align-content: center;
-       
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 30px;
+  padding-top: 20px;
+  align-content: center;
 }
 
-.links-bookmeal-reviews{
-       
-        background-color: rgb(233, 170, 43);
-        padding:4px;
-        color: darkred;
-        border: 1px dotted black;
+.links-bookmeal-reviews {
+  background-color: rgb(233, 170, 43);
+  padding: 4px;
+  color: darkred;
+  border: 1px dotted black;
 }
 
 span {
-        font-weight: 700;
-        font-size: 18px;
-        margin: 2px 3px;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 2px 3px;
 }

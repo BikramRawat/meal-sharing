@@ -1,54 +1,51 @@
-
 .add-reservarions {
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 5em;
-    background-color: violet;
-    }
-
-    .book-meal {
-        margin-top: 2em ;
-        margin-left: 4em;
-    }
-
-.field_set {
-    margin: 1em 0;
-    padding: 1em;
-    border: 1px solid darkred;
-    border-radius: 6px;
-    max-width: 50%;
-    background-color: rgb(243, 152, 16);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5em;
+  background-color: violet;
 }
 
+.book-meal {
+  margin-top: 2em;
+  margin-left: 4em;
+}
+
+.field_set {
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid darkred;
+  border-radius: 6px;
+  max-width: 50%;
+  background-color: rgb(243, 152, 16);
+}
 
 .legend {
-    font-size: 2em;
-    padding: 0 .25em;
-    color: rgb(27, 10, 19);
+  font-size: 2em;
+  padding: 0 0.25em;
+  color: rgb(27, 10, 19);
 }
 
 label {
-    display: block;
-    margin-top: 1em;
-    font-weight: 600;
+  display: block;
+  margin-top: 1em;
+  font-weight: 600;
 }
 
 input {
-    padding: .5em;
-    border: 1px solid black;
-    width: 30em;
-    border-radius: 4px;
+  padding: 0.5em;
+  border: 1px solid black;
+  width: 30em;
+  border-radius: 4px;
 }
 
-
-button{
-    margin-top: 3em;
-    width: 12em;
-    height: 4em;
-    background-color: sandybrown;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: 800;
-    border-radius: 6px;
+button {
+  margin-top: 3em;
+  width: 12em;
+  height: 4em;
+  background-color: sandybrown;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 6px;
 }

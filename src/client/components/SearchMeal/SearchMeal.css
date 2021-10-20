@@ -1,13 +1,13 @@
 .search-meal {
-    min-height: 15vh;
-    text-align: center;
-    color: blue;
-    padding-top: 8px;
+  min-height: 15vh;
+  text-align: center;
+  color: blue;
+  padding-top: 8px;
 }
 
-input[type=search]{
-height: 40px;
-width: 50%;
-border-radius: 10px;
-padding-bottom: 8px;
+input[type="search"] {
+  height: 40px;
+  width: 50%;
+  border-radius: 10px;
+  padding-bottom: 8px;
 }

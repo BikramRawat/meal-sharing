@@ -8,6 +8,7 @@ export default function Page404() {
         This is not the page that you are looking for!
         <br />
         <p>Click Home to goto HomePage 😉</p>
+        {alert("Ooops ! Page Not Found !!! ")}
         <Link to="/">Home</Link>
       </p>
     </div>

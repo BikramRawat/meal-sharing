@@ -31,8 +31,16 @@ router.get('/:id', async (request, response) => {
 // adding a new review using postman app : request.body
 router.post("/", async (request, response) => {
   try {
-    await knex("reviews").insert(request.body);
-    response.json('New review is added');
+    const newReview = await knex("reviews").insert(
+      {
+        title: request.body.title,
+        description: request.body.description,
+        meal_id: request.body.meal_id,
+        stars: request.body.stars,
+        created_date: new Date(),
+      }
+    );
+    response.json(newReview);
   } catch (error) {
     throw error;
   }

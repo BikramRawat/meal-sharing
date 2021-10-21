@@ -7,7 +7,7 @@ const Reviews = (props) => {
   console.log(id, props.reviews);
   const reviewToDisplay =
     id === undefined
-      ? props.reviews.filter((review)=> review.stars > 3)
+      ? props.reviews.filter((review) => review.stars > 3)
       : props.reviews.filter((review) => review.meal_id === Number(id));
   return (
     <div className="reviews-details">
@@ -27,10 +27,8 @@ const Reviews = (props) => {
               <span>Description:</span> {review.description}
             </p>
             <p>
-              <span>Stars:</span> 
-              {
-                Array(review.stars).fill('★').join(' ')
-              }
+              <span>Stars:</span>
+              {Array(review.stars).fill("★").join(" ")}
             </p>
             <p>
               <span>Created Date:</span> {review.created_date}

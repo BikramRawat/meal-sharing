@@ -40,7 +40,7 @@ function App() {
   };
 
   return (
-    <myContext.Provider value={(meals, reviews)}>
+    <myContext.Provider value={{meals, reviews}}>
       <Router>
         <Header />
         <availableContext.Provider value={available}>
@@ -51,6 +51,9 @@ function App() {
               <Meals meals={meals} />
             </Route>
             <Route exact path="/reviews">
+              <MealReviews reviews={reviews} />
+            </Route>
+            <Route exact path={`/reviews/:id`}>
               <MealReviews reviews={reviews} />
             </Route>
             <Route exact path={`/meals/:id`}>
@@ -64,7 +67,7 @@ function App() {
             </Route>
             <Route exact path="/aboutus" component={AboutUs} />
             <Route exact path="/">
-              <HomePage meals={meals} reviews={reviews} />
+              <HomePage />
             </Route>
             <Route path="*" component={Page404} />
           </Switch>

@@ -66,7 +66,7 @@ export default function AddReviews(props) {
         </div>
         <div>
           <fieldset className="field_set">
-            <legend className="legend">Add review</legend>
+            <legend className="legend">Add Review</legend>
             <form onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="title">Title</label>

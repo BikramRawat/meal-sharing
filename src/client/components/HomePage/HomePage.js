@@ -7,8 +7,8 @@ import MealReviews from "../MealReviews/MealReviews";
 // import food_item from '../../assets/food_item.png';
 
 export default function HomePage(props) {
-  const meals = React.useContext(myContext);
-  const reviews = React.useContext(myContext);
+  const {meals, reviews} = React.useContext(myContext);
+ 
 
   return (
     <>

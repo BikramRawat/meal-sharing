@@ -19,7 +19,7 @@ export default function HomePage(props) {
       />
       <SearchMeal />
       <Meals meals={meals} />
-      <h3>Have a look over Meal Reviews:</h3>
+      <h1>Have a look over Meal Reviews:</h1>
       <hr />
       <MealReviews reviews={reviews} />
     </>

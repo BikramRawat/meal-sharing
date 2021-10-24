@@ -23,7 +23,7 @@ const Meals = (props) => {
                 alt="foodimage"
               />
             </div>
-            <p>
+            <p id='description-field'>
               <span>Description:</span> {meal.description}
             </p>
             <p>

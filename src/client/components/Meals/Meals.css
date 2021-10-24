@@ -1,5 +1,4 @@
 .meals-details {
-  width: auto;
   height: auto;
   background: darksalmon;
   /* display: flex;
@@ -17,6 +16,7 @@
   align-content: center;
 }
 
+
 .links-bookmeal-reviews {
   background-color: rgb(233, 170, 43);
   padding: 4px;
@@ -28,4 +28,8 @@ span {
   font-weight: 700;
   font-size: 18px;
   margin: 2px 3px;
+}
+
+#description-field {
+  max-width: 300px;
 }

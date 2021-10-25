@@ -14,7 +14,7 @@ export default function AddReservations(props) {
   const params = useParams();
 
   React.useEffect(() => {
-    const mealUrl = `http://localhost:5000/api/meals/${params.id}`;
+    const mealUrl = `/api/meals/${params.id}`;
     fetch(mealUrl)
       .then((response) => response.json())
       .then((data) => setMeal(data));
@@ -24,7 +24,7 @@ export default function AddReservations(props) {
 
   const createReservation = (reservation) => {
     console.log("reservation", reservation);
-    const url = "http://localhost:5000/api/reservations";
+    const url = "/api/reservations";
     if (reservation) {
       fetch(url, {
         method: "POST",

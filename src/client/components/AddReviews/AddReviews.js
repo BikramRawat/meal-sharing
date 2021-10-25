@@ -12,14 +12,14 @@ export default function AddReviews(props) {
   const params = useParams();
 
   React.useEffect(() => {
-    const reviewUrl = `http://localhost:5000/api/meals/${params.id}`;
+    const reviewUrl = `/api/meals/${params.id}`;
     fetch(reviewUrl)
       .then((response) => response.json())
       .then((data) => setMeal(data));
   }, [params.id]);
 
   const createReview = (review) => {
-    const url = "http://localhost:5000/api/reviews";
+    const url = "/api/reviews";
     if (review) {
       fetch(url, {
         method: "POST",

@@ -16,7 +16,7 @@ export default function CreateMeal() {
   console.log(typeof Number(maxReservations));
 
   const createMeal = (meal) => {
-    const url = "http://localhost:5000/api/meals";
+    const url = "/api/meals";
     if (meal) {
       fetch(url, {
         method: "POST",

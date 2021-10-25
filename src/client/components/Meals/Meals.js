@@ -17,7 +17,7 @@ const Meals = (props) => {
             <h3>Meal: {meal.title}</h3>
             <div>
               <img
-                src="https://www.wallpapertip.com/wmimgs/54-549498_high-resolution-wallpaper-food.jpg"
+                src="https://previews.123rf.com/images/olgastrelnikova/olgastrelnikova1910/olgastrelnikova191000023/132599209-food-sharing-project-vector-illustration-of-share-meal-waste-reduction-giving-helping-hand-for-the-p.jpg"
                 width="260px"
                 height="200px"
                 alt="foodimage"

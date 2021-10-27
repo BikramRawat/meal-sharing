@@ -22,9 +22,11 @@ export default function NavBar() {
 
   return (
     <nav className="navbar">
+      <ul>
       <Link onClick={deleteVar} to="/">
         <li>Home</li>
       </Link>
+      </ul>
       <ul>
         <Link onClick={deleteVar} to="/meals">
           <li>Meals</li>

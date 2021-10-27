@@ -23,7 +23,7 @@ const Reviews = (props) => {
                 alt="thanksimage"
               />
             </div>
-            <p>
+            <p id= 'description-field'>
               <span>Description:</span> {review.description}
             </p>
             <p>

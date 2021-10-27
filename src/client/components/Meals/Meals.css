@@ -10,10 +10,11 @@
 .meals-details .display {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   row-gap: 30px;
   padding-top: 20px;
   align-content: center;
+  margin: 14px 16px;
 }
 
 

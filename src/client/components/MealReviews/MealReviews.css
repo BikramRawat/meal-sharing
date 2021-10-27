@@ -22,3 +22,7 @@ span {
   font-size: 18px;
   margin: 2px 3px;
 }
+
+#description-field {
+  max-width: 300px;
+}

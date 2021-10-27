@@ -4,8 +4,8 @@ import "./AboutUs.css";
 export default function AboutUs() {
   return (
     <div className="aboutus">
+      <h3>About Us : </h3>
       <p>
-        <h3>About Us : </h3>
         Our food is characterized by Chinese and Indian cuisine, but despite the
         country's gigantic neighbors, the food culture of Nepal possesses its
         own unique expression with its distinctive spices and cooking methods.
@@ -33,9 +33,8 @@ export default function AboutUs() {
         />
       </div>
       <p>
-        In Frederiksberg is Restaurent Nepali Bhancha, which in Danish means
-        Nepalese Cuisine. December 2018 we start our new department here in
-        Frederiksberg, after a great success of Tagensvej department where we
+        We are in the center of Copenhagen, and in December 2018 we started our new department here in
+        Copenhagen, after a great success of Ishøj department where we
         have spoiled our guests with tasty and well-prepared dishes from Nepal
         since 2015. Our food is characterized by Chinese and Indian cuisine, but
         despite the country giant neighbors, then the food culture of Nepal

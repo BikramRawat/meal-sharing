@@ -53,7 +53,7 @@ export default function AboutUs() {
         <h3>Opening Hours:</h3>
         <p>
           Monday to Friday: 14:00 to 22:00 <br />
-          Saturday Nd Sunday: 12:00 to 22:00
+          Saturday & Sunday: 12:00 to 22:00
         </p>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 const Reviews = (props) => {
   const { id } = useParams();
-  console.log(id, props.reviews);
+  // console.log(id, props.reviews);
   const reviewToDisplay =
     id === undefined
       ? props.reviews.filter((review) => review.stars > 3)

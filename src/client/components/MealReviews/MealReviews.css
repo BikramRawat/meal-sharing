@@ -1,0 +1,28 @@
+.reviews-details {
+  width: auto;
+  height: auto;
+  background: darksalmon;
+  /* display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      flex-direction: row; */
+}
+
+.reviews-details .display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 30px;
+  padding-top: 20px;
+  align-content: center;
+}
+
+span {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 2px 3px;
+}
+
+#description-field {
+  max-width: 300px;
+}

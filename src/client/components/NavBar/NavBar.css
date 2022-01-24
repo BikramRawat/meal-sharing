@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  /* text-decoration: none;
+  list-style: none; */
+  min-height: 40px;
+  color: white;
+  background: rgb(66, 37, 233);
+  border-bottom: 2px solid rgb(245, 235, 236);
+  border-top: 2px solid rgb(226, 211, 213);
+}
+
+ul {
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+  
+  text-decoration: none;
+  list-style: none;
+}
+
+/* .navbar li {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-size: larger;
+} */
+
+.navbar ul li {
+  margin-left: 20px;
+  font-size: larger;
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
+.navbar ul li:hover {
+  cursor: pointer;
+  color: turquoise;
+  background-color: darkviolet;
+}
+
+.available_reservations {
+  width: 12em;
+  height: 5em;
+  background-color: rgb(247, 243, 30);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 6px;
+}

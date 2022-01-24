@@ -1,0 +1,35 @@
+.home-page {
+  min-height: 100vh;
+  height: auto;
+  /* background: rgb(173, 223, 58); */
+  /* color: white; */
+  /* width: 100%; */
+}
+
+.homepage-search {
+  margin-top: 10px 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.homepage-search input[type="text"] {
+  padding: 10px;
+  outline: none;
+  border: 1px solid red;
+  width: 300px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.button {
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid white;
+  color: white;
+  background: orange;
+  margin-left: 10px;
+  outline: none;
+}

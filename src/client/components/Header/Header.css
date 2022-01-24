@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.heading {
+  width: 100%;
+  height: 25vh;
+  background: #c5b0b9;
+  border-bottom: 1px solid gainsboro;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+.heading img {
+  border-radius: 50%;
+}
+.heading p {
+  margin-left: 100px;
+  color: rgb(9, 13, 230);
+  font-weight: 800;
+  font-size: 80px;
+}

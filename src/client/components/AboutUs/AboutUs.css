@@ -1,0 +1,31 @@
+.aboutus {
+  min-height: 80vh;
+  height: auto;
+  background: rgb(205, 226, 11);
+  width: 100%;
+  opacity: 0.9;
+  font-size: 22px;
+}
+.aboutus h3 {
+  text-align: center;
+}
+.aboutus p {
+  font-size: 16px;
+  margin: 14px;
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.opening_hours {
+  text-align: center;
+  background-color: rgb(253, 85, 7);
+  min-height: 6em;
+  padding: 1em;
+}
+.images {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 15px;
+}

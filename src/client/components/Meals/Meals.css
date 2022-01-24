@@ -1,0 +1,36 @@
+.meals-details {
+  height: auto;
+  background: darksalmon;
+  /* display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          flex-direction: row; */
+}
+
+.meals-details .display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 30px;
+  padding-top: 20px;
+  align-content: center;
+  margin: 14px 16px;
+}
+
+
+.links-bookmeal-reviews {
+  background-color: rgb(233, 170, 43);
+  padding: 4px;
+  color: darkred;
+  border: 1px dotted black;
+}
+
+span {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 2px 3px;
+}
+
+#description-field {
+  max-width: 300px;
+}
